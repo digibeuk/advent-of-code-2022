@@ -1,0 +1,34 @@
+{
+    "name": "martinb/advent-of-code-2022",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Martinb\\AdventOfCode2022\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Martinb\\AdventOfCode2022\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Martin Beukman",
+            "email": "martin@beukman.net"
+        }
+    ],
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "myonlinestore/coding-standard": "^4.0",
+        "phpunit/phpunit": "^9.5",
+        "roave/security-advisories": "dev-latest"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        },
+        "sort-packages": true
+    }
+}
