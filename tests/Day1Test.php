@@ -12,14 +12,18 @@ final class Day1Test extends TestCase
         $elves = [];
         $elf_number = 1;
 
-        foreach (\preg_split(
-                     "#\n\s*\n#Ui",
-                     \file_get_contents(\sprintf('%s/../src/data/day1.txt', __DIR__))
-                 ) as $content) {
+        foreach (
+            \preg_split(
+                "#\n\s*\n#Ui",
+                \file_get_contents(\sprintf('%s/../src/data/day1.txt', __DIR__)),
+            ) as $content
+        ) {
             $elves[$elf_number] = [
                 'sum_of_calories' => \array_sum(
-                    \array_map(static fn(string $calories): int => (int) $calories,
-                        \explode(\PHP_EOL, $content))
+                    \array_map(
+                        static fn (string $calories): int => (int) $calories,
+                        \explode(\PHP_EOL, $content),
+                    ),
                 ),
             ];
 
@@ -27,7 +31,7 @@ final class Day1Test extends TestCase
         }
 
         //sort the elves on number of calories carried
-        uasort($elves, static function (array $a, array $b): int {
+        \uasort($elves, static function (array $a, array $b): int {
             return $b['sum_of_calories'] <=> $a['sum_of_calories'];
         });
 
