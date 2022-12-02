@@ -6,7 +6,7 @@ namespace Martinb\AdventOfCode2022\Tests;
 use Martinb\AdventOfCode2022\Models\Day2\GameChoices;
 use PHPUnit\Framework\TestCase;
 
-final class Day2Test extends TestCase
+final class Day2Part1Test extends TestCase
 {
     private const WIN_SCORE = 6;
     private const DRAW_SCORE = 3;

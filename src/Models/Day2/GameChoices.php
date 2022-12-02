@@ -21,17 +21,4 @@ enum GameChoices: int
 
         return self::SCISSORS;
     }
-
-    public function getWinScore(self $choice): int
-    {
-        if (self::ROCK === $choice) {
-            return 1;
-        }
-
-        if (self::PAPER === $choice) {
-            return 2;
-        }
-
-        return 3;
-    }
 }
